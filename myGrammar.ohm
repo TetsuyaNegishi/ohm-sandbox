@@ -1,0 +1,11 @@
+MyGrammar {
+  Exp
+    = Exp2
+
+  Exp2
+    = Exp2 "+" Greeting -- plus
+    | Greeting
+
+  Greeting
+    = "Hello" | "Hola"
+}
