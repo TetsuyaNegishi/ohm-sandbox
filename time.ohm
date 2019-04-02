@@ -1,0 +1,26 @@
+time {
+  Exp
+    = AddExp
+
+  AddExp
+    = AddExp "+" Time -- plus
+    | Time
+
+  Time
+    = Hours Minutes Seconds -- HourMinuteSeconds
+    | Hours Minutes -- HourMinute
+    | Hours Seconds -- HourSeconds
+    | Minutes Seconds -- MinuteSeconds
+    | Hours
+    | Minutes
+    | Seconds
+
+  Hours
+    = digit+ "h"
+
+  Minutes
+    = digit+ "m"
+
+  Seconds
+    = digit+ "s"
+}
